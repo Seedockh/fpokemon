@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FPokedex</title>
+    <style>
+        body { background: antiquewhite; display: flex; flex-direction:column; align-items: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        section {
+            width: 800px; background: rgb(255, 247, 241); border-radius: 5px; }
+        .title { color: peru; text-decoration: underline; }
+        .subtitle { color: goldenrod; }
+        ul { list-style: none; display: flex; flex-direction: column; padding: 1em; }
+        li { background: peachpuff; border-radius: 15px; padding: 1em; margin: .5em; box-shadow: 1px 1px 2px grey; }
+        /*.list-item {  }*/
+        a { color: teal; text-decoration: none; }
+        footer { margin: 2em; }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Functional Programming</h1>
+    <h2 class="subtitle">Pokemon API</h2>
+    <section>
+        <ul>
+            @(model.pokemons).forEach(pokemon => {
+                <li>
+                    <a href="#" class="list-item">
+                        <img src="" alt="">
+                        <span>@pokemon.name.toUpperCase()</span>
+                    </a>
+                </li>
+            })
+        </ul> 
+    </section>
+    <footer>Crafted with ❤️ by <a href="https://github.com/Seedockh">Pierre Hérissé</a></footer>
+  </body>
+</html>
