@@ -13,9 +13,17 @@
         .title { color: peru; text-decoration: underline; }
         .subtitle { color: goldenrod; }
         ul { list-style: none; display: flex; flex-direction: column; padding: 1em; }
-        li { background: peachpuff; border-radius: 15px; padding: 1em; margin: .5em; box-shadow: 1px 1px 2px grey; }
-        /*.list-item {  }*/
+        li { background: peachpuff; border-radius: 15px; padding: 0 1em; margin: .5em; box-shadow: 1px 1px 2px grey; }
+        .list-item { display: flex; align-items: center; }
+        .list-image { margin-right: 3em; }
         a { color: teal; text-decoration: none; }
+        .details-page { padding: .5em 1em; display: flex; flex-direction: column; justify-content: center; align-items: center }
+        .details-title { margin: 0; color: teal; }
+        .details-line { padding: .5em 1em }
+        .container { display: flex; justify-content: center; width: 100%; }
+        .left-column { width: 20%; display: flex; flex-direction: column; align-items: center }
+        .left-column img { width: 100px; }
+        .right-column { width: 80% }
         footer { margin: 2em; }
     </style>
   </head>
@@ -23,16 +31,7 @@
     <h1 class="title">Functional Programming</h1>
     <h2 class="subtitle">Pokemon API</h2>
     <section>
-        <ul>
-            @(model.pokemons).forEach(pokemon => {
-                <li>
-                    <a href="#" class="list-item">
-                        <img src="" alt="">
-                        <span>@pokemon.name.toUpperCase()</span>
-                    </a>
-                </li>
-            })
-        </ul> 
+        @html.block('content')
     </section>
     <footer>Crafted with ❤️ by <a href="https://github.com/Seedockh">Pierre Hérissé</a></footer>
   </body>

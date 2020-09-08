@@ -1,0 +1,14 @@
+@html.extend('./views/layout.vash', function(model) {
+    @html.append('content', function() {
+		<ul>
+            @(model.pokemons).forEach(function(pokemon) {
+                <li>
+                    <a href="/@pokemon.id" class="list-item">
+                        <img src="@pokemon.image" alt="@pokemon.name Picture" class="list-image">
+                        <span>@pokemon.name.toUpperCase()</span>
+                    </a>
+                </li>
+            })
+        </ul> 
+	})
+})

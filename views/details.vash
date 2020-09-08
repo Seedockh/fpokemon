@@ -1,0 +1,23 @@
+@html.extend('./views/layout.vash', function(model) {
+    @html.append('content', function() {
+        <div class="details-page">
+            <h2 class="details-title">@model.details.name.toUpperCase()</h2>
+            <div class="container">
+                <div class="left-column">
+                    <img src="@model.details.sprites.front_default" alt="@model.name Front">
+                    <img src="@model.details.sprites.back_default" alt="@model.name Back">
+                </div>
+                <div class="right-column">
+                    <ul>
+                        <li class="details-line"><strong>Height :</strong> @model.details.height ft</li>
+                        <li class="details-line"><strong>Weight :</strong> @model.details.weight g</li>
+                        <li class="details-line"><strong>Types :</strong> @(model.details.types).forEach(function(type) {
+                            <pre>@type.type.name</pre>
+                        })</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="/">◀️ Back Home</a>
+        </div>
+	})
+})
