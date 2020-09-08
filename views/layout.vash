@@ -17,11 +17,11 @@
         .list-item { display: flex; align-items: center; }
         .list-image { margin-right: 3em; }
         a { color: teal; text-decoration: none; }
-        .details-page { padding: .5em 1em; display: flex; flex-direction: column; justify-content: center; align-items: center }
+        .details-page { padding: 1em; display: flex; flex-direction: column; justify-content: center; align-items: center }
         .details-title { margin: 0; color: teal; }
         .details-line { padding: .5em 1em }
         .container { display: flex; justify-content: center; width: 100%; }
-        .left-column { width: 20%; display: flex; flex-direction: column; align-items: center }
+        .left-column { width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center }
         .left-column img { width: 100px; }
         .right-column { width: 80% }
         footer { margin: 2em; }
